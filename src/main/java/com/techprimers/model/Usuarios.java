@@ -2,11 +2,15 @@ package com.techprimers.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
 
 @Entity
 public class Usuarios {
 
+    
+    @Id 
+    @GeneratedValue(strategy = IDENTITY)
     private int id;
     private String usuario;
     private String psw;
@@ -24,8 +28,6 @@ public class Usuarios {
 
     
     
-    @Id
-    @GeneratedValue
     public int getId() {
         return id;
     }
